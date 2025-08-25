@@ -1,5 +1,5 @@
 ---
-name: 🎲 Strategy Submission
+name: 🎲 Strategy Submission OLD
 about: Submit a new roulette strategy to the community collection
 title: 'feat(strategy): add [strategy name]'
 labels: ['strategy-submission', 'community']
