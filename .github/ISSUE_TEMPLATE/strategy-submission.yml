@@ -14,3 +14,30 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: contributor
+    attributes:
+      label: Your Name/Handle
+      description: How would you like to be credited as the contributor?
+      placeholder: "e.g., johndoe"
+    validations:
+      required: true
+
+  - type: textarea
+    id: strategy_description
+    attributes:
+      label: Strategy Description
+      description: Provide a detailed description of how your strategy works
+      placeholder: "Describe your strategy in detail"
+    validations:
+      required: true
+
+  - type: input
+    id: strategy_type
+    attributes:
+      label: Strategy Type
+      description: e.g., Martingale, Progressive, Flat Betting, Custom
+      placeholder: "e.g., Martingale"
+    validations:
+      required: true
+
