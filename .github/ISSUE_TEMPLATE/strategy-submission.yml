@@ -22,25 +22,7 @@ body:
       placeholder: "e.g., johndoe"
     validations:
       required: true
-
-  - type: textarea
-    id: strategy_description
-    attributes:
-      label: Strategy Description
-      description: Provide a detailed description of how your strategy works
-      placeholder: "Describe your strategy in detail"
-    validations:
-      required: true
-
-  - type: input
-    id: strategy_type
-    attributes:
-      label: Strategy Type
-      description: e.g., Martingale, Progressive, Flat Betting, Custom
-      placeholder: "e.g., Martingale"
-    validations:
-      required: true
-
+      
   - type: input
     id: default_bankroll
     attributes:
@@ -69,11 +51,47 @@ body:
       required: true
 
   - type: textarea
-    id: special_features
+    id: strategy_description
     attributes:
-      label: Special Features
-      description: Any unique aspects of your strategy (loss limits, win streaks, etc.)
-      placeholder: "Describe any special features"
+      label: Strategy Description
+      description: Provide a detailed description of how your strategy works
+      placeholder: "Describe your strategy in detail"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: strategy_type
+    attributes:
+      label: Strategy Type
+      description: Select one or more types that best describe your strategy. If "Custom", specify below.
+      multiple: true
+      options:
+        - Martingale
+        - Fibonacci
+        - Reverse Martingale
+        - Progressive
+        - Flat Betting
+        - D'Alembert
+        - Pattern Recognition
+        - Custom
+    validations:
+      required: true
+
+  - type: input
+    id: custom_strategy_type
+    attributes:
+      label: Custom Strategy Type
+      description: If you selected "Custom" above, please specify your strategy type here
+      placeholder: "e.g., Labouchere, Secret Sauce"
+    validations:
+      required: false
+
+  - type: input
+    id: strategy_video
+    attributes:
+      label: Strategy Video Link
+      description: Optionally provide a link to a video demonstrating your strategy (YouTube, Vimeo, etc.)
+      placeholder: "e.g., https://youtu.be/example"
     validations:
       required: false
 
@@ -85,8 +103,3 @@ body:
       placeholder: "Any additional information"
     validations:
       required: false
-
-  - type: markdown
-    attributes:
-      value: |
-        **Note:** After creating this issue, you'll need to submit a Pull Request with your strategy implementation. See our [Contributing Guidelines](../CONTRIBUTING.md) for detailed instructions.
